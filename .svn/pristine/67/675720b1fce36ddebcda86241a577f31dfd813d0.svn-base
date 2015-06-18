@@ -1,0 +1,241 @@
+﻿namespace CDental
+{
+    partial class frmMenuPrincipal
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.geToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresoALaCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.realizarAbonoACuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.expedientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.examenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDeCitaasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.otrasGestionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDireccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ocupacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeTelefonosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientesToolStripMenuItem,
+            this.expedientesToolStripMenuItem,
+            this.otrasGestionesToolStripMenuItem,
+            this.usuariosDelSistemaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(990, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.geToolStripMenuItem,
+            this.gestionCuentaToolStripMenuItem});
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // geToolStripMenuItem
+            // 
+            this.geToolStripMenuItem.Name = "geToolStripMenuItem";
+            this.geToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.geToolStripMenuItem.Text = "Gestion Cliente";
+            this.geToolStripMenuItem.Click += new System.EventHandler(this.geToolStripMenuItem_Click);
+            // 
+            // gestionCuentaToolStripMenuItem
+            // 
+            this.gestionCuentaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresoALaCuentaToolStripMenuItem,
+            this.realizarAbonoACuentaToolStripMenuItem});
+            this.gestionCuentaToolStripMenuItem.Name = "gestionCuentaToolStripMenuItem";
+            this.gestionCuentaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.gestionCuentaToolStripMenuItem.Text = "Gestion Cuenta";
+            this.gestionCuentaToolStripMenuItem.Click += new System.EventHandler(this.gestionCuentaToolStripMenuItem_Click);
+            // 
+            // ingresoALaCuentaToolStripMenuItem
+            // 
+            this.ingresoALaCuentaToolStripMenuItem.Name = "ingresoALaCuentaToolStripMenuItem";
+            this.ingresoALaCuentaToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.ingresoALaCuentaToolStripMenuItem.Text = "Ingreso a la Cuenta";
+            // 
+            // realizarAbonoACuentaToolStripMenuItem
+            // 
+            this.realizarAbonoACuentaToolStripMenuItem.Name = "realizarAbonoACuentaToolStripMenuItem";
+            this.realizarAbonoACuentaToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.realizarAbonoACuentaToolStripMenuItem.Text = "Realizar Abono a Cuenta";
+            // 
+            // expedientesToolStripMenuItem
+            // 
+            this.expedientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestionExpedienteToolStripMenuItem,
+            this.examenToolStripMenuItem,
+            this.gestionDeCitaasToolStripMenuItem});
+            this.expedientesToolStripMenuItem.Name = "expedientesToolStripMenuItem";
+            this.expedientesToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.expedientesToolStripMenuItem.Text = "Expedientes";
+            // 
+            // gestionExpedienteToolStripMenuItem
+            // 
+            this.gestionExpedienteToolStripMenuItem.Name = "gestionExpedienteToolStripMenuItem";
+            this.gestionExpedienteToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.gestionExpedienteToolStripMenuItem.Text = "Gestion Expediente";
+            this.gestionExpedienteToolStripMenuItem.Click += new System.EventHandler(this.gestionExpedienteToolStripMenuItem_Click);
+            // 
+            // examenToolStripMenuItem
+            // 
+            this.examenToolStripMenuItem.Name = "examenToolStripMenuItem";
+            this.examenToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.examenToolStripMenuItem.Text = "Gestion Examen";
+            this.examenToolStripMenuItem.Click += new System.EventHandler(this.examenToolStripMenuItem_Click);
+            // 
+            // gestionDeCitaasToolStripMenuItem
+            // 
+            this.gestionDeCitaasToolStripMenuItem.Name = "gestionDeCitaasToolStripMenuItem";
+            this.gestionDeCitaasToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.gestionDeCitaasToolStripMenuItem.Text = "Gestion de Citas";
+            // 
+            // otrasGestionesToolStripMenuItem
+            // 
+            this.otrasGestionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tiposDireccionesToolStripMenuItem,
+            this.ocupacionesToolStripMenuItem,
+            this.tiposDeTelefonosToolStripMenuItem});
+            this.otrasGestionesToolStripMenuItem.Name = "otrasGestionesToolStripMenuItem";
+            this.otrasGestionesToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.otrasGestionesToolStripMenuItem.Text = "Otras Gestiones";
+            // 
+            // tiposDireccionesToolStripMenuItem
+            // 
+            this.tiposDireccionesToolStripMenuItem.Name = "tiposDireccionesToolStripMenuItem";
+            this.tiposDireccionesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.tiposDireccionesToolStripMenuItem.Text = "Tipos de Direcciones";
+            this.tiposDireccionesToolStripMenuItem.Click += new System.EventHandler(this.tiposDireccionesToolStripMenuItem_Click);
+            // 
+            // ocupacionesToolStripMenuItem
+            // 
+            this.ocupacionesToolStripMenuItem.Name = "ocupacionesToolStripMenuItem";
+            this.ocupacionesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.ocupacionesToolStripMenuItem.Text = "Tipos de Ocupaciones";
+            this.ocupacionesToolStripMenuItem.Click += new System.EventHandler(this.ocupacionesToolStripMenuItem_Click);
+            // 
+            // tiposDeTelefonosToolStripMenuItem
+            // 
+            this.tiposDeTelefonosToolStripMenuItem.Name = "tiposDeTelefonosToolStripMenuItem";
+            this.tiposDeTelefonosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.tiposDeTelefonosToolStripMenuItem.Text = "Tipos de Telefonos";
+            this.tiposDeTelefonosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeTelefonosToolStripMenuItem_Click);
+            // 
+            // usuariosDelSistemaToolStripMenuItem
+            // 
+            this.usuariosDelSistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosToolStripMenuItem});
+            this.usuariosDelSistemaToolStripMenuItem.Name = "usuariosDelSistemaToolStripMenuItem";
+            this.usuariosDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.usuariosDelSistemaToolStripMenuItem.Text = "Administracion";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(779, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Usuario:";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(831, 9);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(53, 13);
+            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.Text = "lblUsuario";
+            // 
+            // frmMenuPrincipal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(990, 494);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "frmMenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sistema de Gestión de CDental";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem geToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionCuentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem expedientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionExpedienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem examenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionDeCitaasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem otrasGestionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDireccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ocupacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeTelefonosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosDelSistemaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresoALaCuentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem realizarAbonoACuentaToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsuario;
+    }
+}
+

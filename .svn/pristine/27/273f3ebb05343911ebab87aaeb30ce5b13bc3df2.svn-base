@@ -1,0 +1,79 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using CDental.WSCDental;
+
+namespace CDental
+{
+    public partial class frmRegistroPiezas : Form
+    {
+
+        private frmRegistroExamen frmPadre;
+        public int codExamen = 0;
+        public int codPieza = 0;
+
+        public frmRegistroPiezas()
+        {
+            InitializeComponent();
+        }
+
+        public frmRegistroPiezas(int Pieza, int Examen,frmRegistroExamen frmPadreParam)
+        {
+            frmPadre = frmPadreParam;
+            InitializeComponent();
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Sana", 0, Color.Green));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Daño Moderado", 1, Color.Yellow));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Daño Avanzado", 2, Color.Red));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Ausente", 3, Color.Black));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Prótesis", 4, Color.Blue));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Reparada", 5, Color.Gray));
+            cmbEstadoPieza.SelectedIndex = 0;
+            cmbEstadoPieza.SelectedValue = "0";
+
+            Dictionary<string, int> dictPosiciones = new Dictionary<string, int>();
+            dictPosiciones.Add("Corona", 0);
+            dictPosiciones.Add("Pulpa", 1);
+            dictPosiciones.Add("Raíz", 2);
+            cmbPosición.DataSource = new BindingSource(dictPosiciones, null); 
+            cmbPosición.DisplayMember = "Key";
+            cmbPosición.ValueMember = "Value";
+            cmbPosición.SelectedValue = 0;
+            codExamen = Examen;
+            codPieza = Pieza;
+            txtNumeroPieza.Text = codPieza.ToString();
+        }
+
+        private void btnRegistrarPieza_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                using (CDentalSoapClient svc = new CDentalSoapClient())
+                {
+                    var piezaDetalle = new ExamenDetalle();
+                    piezaDetalle.Examen = codExamen;
+                    piezaDetalle.FechaCambioEstado = DateTime.Now;
+                    piezaDetalle.Pieza = codPieza;
+                    piezaDetalle.Observaciones = txtObservacionesPieza.Text;
+                    piezaDetalle.TipoEstadoPieza = int.Parse(cmbEstadoPieza.SelectedValue.ToString());
+                    piezaDetalle.TipoPosicion =  int.Parse(cmbPosición.SelectedValue.ToString());
+                    svc.ExamenDetalleInsertar(piezaDetalle);
+                    MessageBox.Show("Pieza registrada");
+
+                }
+                frmPadre.refrescaraAlCerrar();
+                this.Close();
+            }
+            catch (Exception ex)
+            { 
+                throw; 
+            }
+            
+            
+        }
+    }
+}

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{199D6DF1-754F-4F39-BFAF-1E27827E49B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ElementosBD</RootNamespace>
+    <AssemblyName>ElementosBD</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Procedimientos\Canton.cs" />
+    <Compile Include="Procedimientos\Cita.cs" />
+    <Compile Include="Procedimientos\Cliente.cs" />
+    <Compile Include="Procedimientos\Cuentas.cs" />
+    <Compile Include="Procedimientos\CuentasHistorico.cs" />
+    <Compile Include="Procedimientos\DireccionesCliente.cs" />
+    <Compile Include="Procedimientos\Distrito.cs" />
+    <Compile Include="Procedimientos\ExamenDetalle.cs" />
+    <Compile Include="Procedimientos\ExamenEncabezado.cs" />
+    <Compile Include="Procedimientos\Expediente.cs" />
+    <Compile Include="Procedimientos\ExpedienteOpcional.cs" />
+    <Compile Include="Procedimientos\Pais.cs" />
+    <Compile Include="Procedimientos\ParentescoCliente.cs" />
+    <Compile Include="Procedimientos\Piezas.cs" />
+    <Compile Include="Procedimientos\Provincia.cs" />
+    <Compile Include="Procedimientos\Telefonos.cs" />
+    <Compile Include="Procedimientos\TipoDireccion.cs" />
+    <Compile Include="Procedimientos\TipoEstadoPieza.cs" />
+    <Compile Include="Procedimientos\TipoOcupacion.cs" />
+    <Compile Include="Procedimientos\TipoParentesco.cs" />
+    <Compile Include="Procedimientos\TipoPosicion.cs" />
+    <Compile Include="Procedimientos\TipoTelefono.cs" />
+    <Compile Include="Procedimientos\Usuarios.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tablas\Canton.cs" />
+    <Compile Include="Tablas\Cita.cs" />
+    <Compile Include="Tablas\Cliente.cs" />
+    <Compile Include="Tablas\Cuentas.cs" />
+    <Compile Include="Tablas\CuentasHistorico.cs" />
+    <Compile Include="Tablas\DireccionesCliente.cs" />
+    <Compile Include="Tablas\Distrito.cs" />
+    <Compile Include="Tablas\ExamenDetalle.cs" />
+    <Compile Include="Tablas\ExamenEncabezado.cs" />
+    <Compile Include="Tablas\Expediente.cs" />
+    <Compile Include="Tablas\ExpedienteOpcional.cs" />
+    <Compile Include="Tablas\Pais.cs" />
+    <Compile Include="Tablas\ParentescoCliente.cs" />
+    <Compile Include="Tablas\Piezas.cs" />
+    <Compile Include="Tablas\Provincia.cs" />
+    <Compile Include="Tablas\Telefonos.cs" />
+    <Compile Include="Tablas\TipoDireccion.cs" />
+    <Compile Include="Tablas\TipoEstadoPieza.cs" />
+    <Compile Include="Tablas\TipoOcupacion.cs" />
+    <Compile Include="Tablas\TipoParentesco.cs" />
+    <Compile Include="Tablas\TipoPosicion.cs" />
+    <Compile Include="Tablas\TipoTelefono.cs" />
+    <Compile Include="Tablas\Usuarios.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

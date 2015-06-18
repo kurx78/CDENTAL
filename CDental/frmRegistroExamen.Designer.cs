@@ -1,0 +1,745 @@
+﻿namespace CDental
+{
+    partial class frmRegistroExamen
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroExamen));
+            this.btnpieza1 = new System.Windows.Forms.Button();
+            this.btnpieza2 = new System.Windows.Forms.Button();
+            this.btnpieza3 = new System.Windows.Forms.Button();
+            this.btnpieza4 = new System.Windows.Forms.Button();
+            this.btnpieza5 = new System.Windows.Forms.Button();
+            this.btnpieza6 = new System.Windows.Forms.Button();
+            this.btnpieza7 = new System.Windows.Forms.Button();
+            this.btnpieza8 = new System.Windows.Forms.Button();
+            this.btnpieza9 = new System.Windows.Forms.Button();
+            this.btnpieza10 = new System.Windows.Forms.Button();
+            this.btnpieza11 = new System.Windows.Forms.Button();
+            this.btnpieza12 = new System.Windows.Forms.Button();
+            this.btnpieza13 = new System.Windows.Forms.Button();
+            this.btnpieza14 = new System.Windows.Forms.Button();
+            this.btnpieza15 = new System.Windows.Forms.Button();
+            this.btnpieza16 = new System.Windows.Forms.Button();
+            this.btnpieza32 = new System.Windows.Forms.Button();
+            this.btnpieza31 = new System.Windows.Forms.Button();
+            this.btnpieza17 = new System.Windows.Forms.Button();
+            this.btnpieza18 = new System.Windows.Forms.Button();
+            this.btnpieza30 = new System.Windows.Forms.Button();
+            this.btnpieza19 = new System.Windows.Forms.Button();
+            this.btnpieza29 = new System.Windows.Forms.Button();
+            this.btnpieza20 = new System.Windows.Forms.Button();
+            this.btnpieza28 = new System.Windows.Forms.Button();
+            this.btnpieza27 = new System.Windows.Forms.Button();
+            this.btnpieza26 = new System.Windows.Forms.Button();
+            this.btnpieza25 = new System.Windows.Forms.Button();
+            this.btnpieza24 = new System.Windows.Forms.Button();
+            this.btnpieza21 = new System.Windows.Forms.Button();
+            this.btnpieza22 = new System.Windows.Forms.Button();
+            this.btnpieza23 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbPosición = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbEstadoPieza = new CDental.ComboBoxCustom();
+            this.lblEstadoPieza = new System.Windows.Forms.Label();
+            this.txtDescripcionPieza = new System.Windows.Forms.TextBox();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.txtNumeroPieza = new System.Windows.Forms.TextBox();
+            this.lblNumeroPieza = new System.Windows.Forms.Label();
+            this.btnVerEstadisticas = new System.Windows.Forms.Button();
+            this.btnRegistrarPieza = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtGenero = new System.Windows.Forms.TextBox();
+            this.btnBuscarExpediente = new System.Windows.Forms.Button();
+            this.lblGenero = new System.Windows.Forms.Label();
+            this.txtNumExp = new System.Windows.Forms.TextBox();
+            this.lblNumExp = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtNumCedula = new System.Windows.Forms.TextBox();
+            this.lblNumCedula = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pctPiezas = new System.Windows.Forms.PictureBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctPiezas)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnpieza1
+            // 
+            this.btnpieza1.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza1.Location = new System.Drawing.Point(51, 406);
+            this.btnpieza1.Name = "btnpieza1";
+            this.btnpieza1.Size = new System.Drawing.Size(26, 23);
+            this.btnpieza1.TabIndex = 1;
+            this.btnpieza1.UseVisualStyleBackColor = false;
+            this.btnpieza1.Click += new System.EventHandler(this.btnpieza1_Click);
+            // 
+            // btnpieza2
+            // 
+            this.btnpieza2.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza2.Location = new System.Drawing.Point(51, 377);
+            this.btnpieza2.Name = "btnpieza2";
+            this.btnpieza2.Size = new System.Drawing.Size(26, 32);
+            this.btnpieza2.TabIndex = 2;
+            this.btnpieza2.UseVisualStyleBackColor = false;
+            this.btnpieza2.Click += new System.EventHandler(this.btnpieza2_Click);
+            // 
+            // btnpieza3
+            // 
+            this.btnpieza3.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza3.Location = new System.Drawing.Point(57, 348);
+            this.btnpieza3.Name = "btnpieza3";
+            this.btnpieza3.Size = new System.Drawing.Size(34, 32);
+            this.btnpieza3.TabIndex = 3;
+            this.btnpieza3.UseVisualStyleBackColor = false;
+            this.btnpieza3.Click += new System.EventHandler(this.btnpieza3_Click);
+            // 
+            // btnpieza4
+            // 
+            this.btnpieza4.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza4.Location = new System.Drawing.Point(71, 331);
+            this.btnpieza4.Name = "btnpieza4";
+            this.btnpieza4.Size = new System.Drawing.Size(20, 23);
+            this.btnpieza4.TabIndex = 4;
+            this.btnpieza4.UseVisualStyleBackColor = false;
+            this.btnpieza4.Click += new System.EventHandler(this.btnpieza4_Click);
+            // 
+            // btnpieza5
+            // 
+            this.btnpieza5.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza5.Location = new System.Drawing.Point(81, 303);
+            this.btnpieza5.Name = "btnpieza5";
+            this.btnpieza5.Size = new System.Drawing.Size(20, 32);
+            this.btnpieza5.TabIndex = 5;
+            this.btnpieza5.UseVisualStyleBackColor = false;
+            this.btnpieza5.Click += new System.EventHandler(this.btnpieza5_Click);
+            // 
+            // btnpieza6
+            // 
+            this.btnpieza6.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza6.Location = new System.Drawing.Point(92, 288);
+            this.btnpieza6.Name = "btnpieza6";
+            this.btnpieza6.Size = new System.Drawing.Size(20, 27);
+            this.btnpieza6.TabIndex = 6;
+            this.btnpieza6.UseVisualStyleBackColor = false;
+            this.btnpieza6.Click += new System.EventHandler(this.btnpieza6_Click);
+            // 
+            // btnpieza7
+            // 
+            this.btnpieza7.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza7.Location = new System.Drawing.Point(109, 275);
+            this.btnpieza7.Name = "btnpieza7";
+            this.btnpieza7.Size = new System.Drawing.Size(20, 23);
+            this.btnpieza7.TabIndex = 7;
+            this.btnpieza7.UseVisualStyleBackColor = false;
+            this.btnpieza7.Click += new System.EventHandler(this.btnpieza7_Click);
+            // 
+            // btnpieza8
+            // 
+            this.btnpieza8.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza8.Location = new System.Drawing.Point(128, 264);
+            this.btnpieza8.Name = "btnpieza8";
+            this.btnpieza8.Size = new System.Drawing.Size(27, 23);
+            this.btnpieza8.TabIndex = 8;
+            this.btnpieza8.UseVisualStyleBackColor = false;
+            this.btnpieza8.Click += new System.EventHandler(this.btnpieza8_Click);
+            // 
+            // btnpieza9
+            // 
+            this.btnpieza9.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza9.Location = new System.Drawing.Point(151, 264);
+            this.btnpieza9.Name = "btnpieza9";
+            this.btnpieza9.Size = new System.Drawing.Size(30, 23);
+            this.btnpieza9.TabIndex = 9;
+            this.btnpieza9.UseVisualStyleBackColor = false;
+            this.btnpieza9.Click += new System.EventHandler(this.btnpieza9_Click);
+            // 
+            // btnpieza10
+            // 
+            this.btnpieza10.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza10.Location = new System.Drawing.Point(178, 275);
+            this.btnpieza10.Name = "btnpieza10";
+            this.btnpieza10.Size = new System.Drawing.Size(28, 23);
+            this.btnpieza10.TabIndex = 10;
+            this.btnpieza10.UseVisualStyleBackColor = false;
+            this.btnpieza10.Click += new System.EventHandler(this.btnpieza10_Click);
+            // 
+            // btnpieza11
+            // 
+            this.btnpieza11.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza11.Location = new System.Drawing.Point(195, 292);
+            this.btnpieza11.Name = "btnpieza11";
+            this.btnpieza11.Size = new System.Drawing.Size(27, 23);
+            this.btnpieza11.TabIndex = 11;
+            this.btnpieza11.UseVisualStyleBackColor = false;
+            this.btnpieza11.Click += new System.EventHandler(this.btnpieza11_Click);
+            // 
+            // btnpieza12
+            // 
+            this.btnpieza12.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza12.Location = new System.Drawing.Point(197, 312);
+            this.btnpieza12.Name = "btnpieza12";
+            this.btnpieza12.Size = new System.Drawing.Size(32, 23);
+            this.btnpieza12.TabIndex = 12;
+            this.btnpieza12.UseVisualStyleBackColor = false;
+            this.btnpieza12.Click += new System.EventHandler(this.btnpieza12_Click);
+            // 
+            // btnpieza13
+            // 
+            this.btnpieza13.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza13.Location = new System.Drawing.Point(219, 331);
+            this.btnpieza13.Name = "btnpieza13";
+            this.btnpieza13.Size = new System.Drawing.Size(32, 23);
+            this.btnpieza13.TabIndex = 13;
+            this.btnpieza13.UseVisualStyleBackColor = false;
+            this.btnpieza13.Click += new System.EventHandler(this.btnpieza13_Click);
+            // 
+            // btnpieza14
+            // 
+            this.btnpieza14.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza14.Location = new System.Drawing.Point(221, 354);
+            this.btnpieza14.Name = "btnpieza14";
+            this.btnpieza14.Size = new System.Drawing.Size(30, 26);
+            this.btnpieza14.TabIndex = 14;
+            this.btnpieza14.UseVisualStyleBackColor = false;
+            this.btnpieza14.Click += new System.EventHandler(this.btnpieza14_Click);
+            // 
+            // btnpieza15
+            // 
+            this.btnpieza15.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza15.Location = new System.Drawing.Point(231, 377);
+            this.btnpieza15.Name = "btnpieza15";
+            this.btnpieza15.Size = new System.Drawing.Size(27, 32);
+            this.btnpieza15.TabIndex = 15;
+            this.btnpieza15.UseVisualStyleBackColor = false;
+            this.btnpieza15.Click += new System.EventHandler(this.btnpieza15_Click);
+            // 
+            // btnpieza16
+            // 
+            this.btnpieza16.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza16.Location = new System.Drawing.Point(224, 406);
+            this.btnpieza16.Name = "btnpieza16";
+            this.btnpieza16.Size = new System.Drawing.Size(34, 23);
+            this.btnpieza16.TabIndex = 16;
+            this.btnpieza16.UseVisualStyleBackColor = false;
+            this.btnpieza16.Click += new System.EventHandler(this.btnpieza16_Click);
+            // 
+            // btnpieza32
+            // 
+            this.btnpieza32.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza32.Location = new System.Drawing.Point(57, 451);
+            this.btnpieza32.Name = "btnpieza32";
+            this.btnpieza32.Size = new System.Drawing.Size(34, 23);
+            this.btnpieza32.TabIndex = 17;
+            this.btnpieza32.UseVisualStyleBackColor = false;
+            this.btnpieza32.Click += new System.EventHandler(this.btnpieza32_Click);
+            // 
+            // btnpieza31
+            // 
+            this.btnpieza31.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza31.Location = new System.Drawing.Point(57, 480);
+            this.btnpieza31.Name = "btnpieza31";
+            this.btnpieza31.Size = new System.Drawing.Size(34, 23);
+            this.btnpieza31.TabIndex = 18;
+            this.btnpieza31.UseVisualStyleBackColor = false;
+            this.btnpieza31.Click += new System.EventHandler(this.btnpieza31_Click);
+            // 
+            // btnpieza17
+            // 
+            this.btnpieza17.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza17.Location = new System.Drawing.Point(231, 451);
+            this.btnpieza17.Name = "btnpieza17";
+            this.btnpieza17.Size = new System.Drawing.Size(27, 23);
+            this.btnpieza17.TabIndex = 19;
+            this.btnpieza17.UseVisualStyleBackColor = false;
+            this.btnpieza17.Click += new System.EventHandler(this.btnpieza17_Click);
+            // 
+            // btnpieza18
+            // 
+            this.btnpieza18.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza18.Location = new System.Drawing.Point(231, 480);
+            this.btnpieza18.Name = "btnpieza18";
+            this.btnpieza18.Size = new System.Drawing.Size(27, 23);
+            this.btnpieza18.TabIndex = 20;
+            this.btnpieza18.UseVisualStyleBackColor = false;
+            this.btnpieza18.Click += new System.EventHandler(this.btnpieza18_Click);
+            // 
+            // btnpieza30
+            // 
+            this.btnpieza30.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza30.Location = new System.Drawing.Point(57, 509);
+            this.btnpieza30.Name = "btnpieza30";
+            this.btnpieza30.Size = new System.Drawing.Size(34, 23);
+            this.btnpieza30.TabIndex = 21;
+            this.btnpieza30.UseVisualStyleBackColor = false;
+            this.btnpieza30.Click += new System.EventHandler(this.btnpieza30_Click);
+            // 
+            // btnpieza19
+            // 
+            this.btnpieza19.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza19.Location = new System.Drawing.Point(224, 500);
+            this.btnpieza19.Name = "btnpieza19";
+            this.btnpieza19.Size = new System.Drawing.Size(27, 32);
+            this.btnpieza19.TabIndex = 22;
+            this.btnpieza19.UseVisualStyleBackColor = false;
+            this.btnpieza19.Click += new System.EventHandler(this.btnpieza19_Click);
+            // 
+            // btnpieza29
+            // 
+            this.btnpieza29.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza29.Location = new System.Drawing.Point(71, 528);
+            this.btnpieza29.Name = "btnpieza29";
+            this.btnpieza29.Size = new System.Drawing.Size(30, 33);
+            this.btnpieza29.TabIndex = 23;
+            this.btnpieza29.UseVisualStyleBackColor = false;
+            this.btnpieza29.Click += new System.EventHandler(this.btnpieza29_Click);
+            // 
+            // btnpieza20
+            // 
+            this.btnpieza20.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza20.Location = new System.Drawing.Point(209, 528);
+            this.btnpieza20.Name = "btnpieza20";
+            this.btnpieza20.Size = new System.Drawing.Size(32, 33);
+            this.btnpieza20.TabIndex = 24;
+            this.btnpieza20.UseVisualStyleBackColor = false;
+            this.btnpieza20.Click += new System.EventHandler(this.btnpieza20_Click);
+            // 
+            // btnpieza28
+            // 
+            this.btnpieza28.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza28.Location = new System.Drawing.Point(81, 557);
+            this.btnpieza28.Name = "btnpieza28";
+            this.btnpieza28.Size = new System.Drawing.Size(31, 23);
+            this.btnpieza28.TabIndex = 25;
+            this.btnpieza28.UseVisualStyleBackColor = false;
+            this.btnpieza28.Click += new System.EventHandler(this.btnpieza28_Click);
+            // 
+            // btnpieza27
+            // 
+            this.btnpieza27.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza27.Location = new System.Drawing.Point(92, 577);
+            this.btnpieza27.Name = "btnpieza27";
+            this.btnpieza27.Size = new System.Drawing.Size(37, 25);
+            this.btnpieza27.TabIndex = 26;
+            this.btnpieza27.UseVisualStyleBackColor = false;
+            this.btnpieza27.Click += new System.EventHandler(this.btnpieza27_Click);
+            // 
+            // btnpieza26
+            // 
+            this.btnpieza26.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza26.Location = new System.Drawing.Point(118, 588);
+            this.btnpieza26.Name = "btnpieza26";
+            this.btnpieza26.Size = new System.Drawing.Size(20, 23);
+            this.btnpieza26.TabIndex = 27;
+            this.btnpieza26.UseVisualStyleBackColor = false;
+            this.btnpieza26.Click += new System.EventHandler(this.btnpieza26_Click);
+            // 
+            // btnpieza25
+            // 
+            this.btnpieza25.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza25.Location = new System.Drawing.Point(135, 588);
+            this.btnpieza25.Name = "btnpieza25";
+            this.btnpieza25.Size = new System.Drawing.Size(20, 23);
+            this.btnpieza25.TabIndex = 28;
+            this.btnpieza25.UseVisualStyleBackColor = false;
+            this.btnpieza25.Click += new System.EventHandler(this.btnpieza25_Click);
+            // 
+            // btnpieza24
+            // 
+            this.btnpieza24.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza24.Location = new System.Drawing.Point(151, 588);
+            this.btnpieza24.Name = "btnpieza24";
+            this.btnpieza24.Size = new System.Drawing.Size(20, 23);
+            this.btnpieza24.TabIndex = 29;
+            this.btnpieza24.UseVisualStyleBackColor = false;
+            this.btnpieza24.Click += new System.EventHandler(this.btnpieza24_Click);
+            // 
+            // btnpieza21
+            // 
+            this.btnpieza21.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza21.Location = new System.Drawing.Point(195, 557);
+            this.btnpieza21.Name = "btnpieza21";
+            this.btnpieza21.Size = new System.Drawing.Size(34, 23);
+            this.btnpieza21.TabIndex = 30;
+            this.btnpieza21.UseVisualStyleBackColor = false;
+            this.btnpieza21.Click += new System.EventHandler(this.btnpieza21_Click);
+            // 
+            // btnpieza22
+            // 
+            this.btnpieza22.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza22.Location = new System.Drawing.Point(188, 577);
+            this.btnpieza22.Name = "btnpieza22";
+            this.btnpieza22.Size = new System.Drawing.Size(34, 25);
+            this.btnpieza22.TabIndex = 31;
+            this.btnpieza22.UseVisualStyleBackColor = false;
+            this.btnpieza22.Click += new System.EventHandler(this.btnpieza22_Click);
+            // 
+            // btnpieza23
+            // 
+            this.btnpieza23.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnpieza23.Location = new System.Drawing.Point(169, 588);
+            this.btnpieza23.Name = "btnpieza23";
+            this.btnpieza23.Size = new System.Drawing.Size(20, 23);
+            this.btnpieza23.TabIndex = 32;
+            this.btnpieza23.UseVisualStyleBackColor = false;
+            this.btnpieza23.Click += new System.EventHandler(this.btnpieza23_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cmbPosición);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.cmbEstadoPieza);
+            this.groupBox1.Controls.Add(this.lblEstadoPieza);
+            this.groupBox1.Controls.Add(this.txtDescripcionPieza);
+            this.groupBox1.Controls.Add(this.lblDescripcion);
+            this.groupBox1.Controls.Add(this.txtNumeroPieza);
+            this.groupBox1.Controls.Add(this.lblNumeroPieza);
+            this.groupBox1.Location = new System.Drawing.Point(312, 348);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(296, 159);
+            this.groupBox1.TabIndex = 33;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos de la pieza";
+            // 
+            // cmbPosición
+            // 
+            this.cmbPosición.FormattingEnabled = true;
+            this.cmbPosición.Location = new System.Drawing.Point(103, 112);
+            this.cmbPosición.Name = "cmbPosición";
+            this.cmbPosición.Size = new System.Drawing.Size(147, 21);
+            this.cmbPosición.TabIndex = 46;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Posición Daño:";
+            // 
+            // cmbEstadoPieza
+            // 
+            this.cmbEstadoPieza.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbEstadoPieza.FormattingEnabled = true;
+            this.cmbEstadoPieza.Location = new System.Drawing.Point(103, 79);
+            this.cmbEstadoPieza.Name = "cmbEstadoPieza";
+            this.cmbEstadoPieza.Size = new System.Drawing.Size(147, 21);
+            this.cmbEstadoPieza.TabIndex = 35;
+            // 
+            // lblEstadoPieza
+            // 
+            this.lblEstadoPieza.AutoSize = true;
+            this.lblEstadoPieza.Location = new System.Drawing.Point(6, 82);
+            this.lblEstadoPieza.Name = "lblEstadoPieza";
+            this.lblEstadoPieza.Size = new System.Drawing.Size(72, 13);
+            this.lblEstadoPieza.TabIndex = 4;
+            this.lblEstadoPieza.Text = "Estado Pieza:";
+            // 
+            // txtDescripcionPieza
+            // 
+            this.txtDescripcionPieza.Location = new System.Drawing.Point(103, 49);
+            this.txtDescripcionPieza.Name = "txtDescripcionPieza";
+            this.txtDescripcionPieza.Size = new System.Drawing.Size(147, 20);
+            this.txtDescripcionPieza.TabIndex = 3;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Location = new System.Drawing.Point(6, 52);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(66, 13);
+            this.lblDescripcion.TabIndex = 2;
+            this.lblDescripcion.Text = "Descripción:";
+            // 
+            // txtNumeroPieza
+            // 
+            this.txtNumeroPieza.Enabled = false;
+            this.txtNumeroPieza.Location = new System.Drawing.Point(103, 21);
+            this.txtNumeroPieza.Name = "txtNumeroPieza";
+            this.txtNumeroPieza.Size = new System.Drawing.Size(49, 20);
+            this.txtNumeroPieza.TabIndex = 1;
+            // 
+            // lblNumeroPieza
+            // 
+            this.lblNumeroPieza.AutoSize = true;
+            this.lblNumeroPieza.Location = new System.Drawing.Point(6, 24);
+            this.lblNumeroPieza.Name = "lblNumeroPieza";
+            this.lblNumeroPieza.Size = new System.Drawing.Size(90, 13);
+            this.lblNumeroPieza.TabIndex = 0;
+            this.lblNumeroPieza.Text = "Número de pieza:";
+            // 
+            // btnVerEstadisticas
+            // 
+            this.btnVerEstadisticas.Location = new System.Drawing.Point(470, 619);
+            this.btnVerEstadisticas.Name = "btnVerEstadisticas";
+            this.btnVerEstadisticas.Size = new System.Drawing.Size(113, 41);
+            this.btnVerEstadisticas.TabIndex = 44;
+            this.btnVerEstadisticas.Text = "Ver Historial";
+            this.btnVerEstadisticas.UseVisualStyleBackColor = true;
+            this.btnVerEstadisticas.Click += new System.EventHandler(this.btnVerEstadisticas_Click);
+            // 
+            // btnRegistrarPieza
+            // 
+            this.btnRegistrarPieza.Location = new System.Drawing.Point(342, 619);
+            this.btnRegistrarPieza.Name = "btnRegistrarPieza";
+            this.btnRegistrarPieza.Size = new System.Drawing.Size(113, 41);
+            this.btnRegistrarPieza.TabIndex = 43;
+            this.btnRegistrarPieza.Text = "Registrar Pieza";
+            this.btnRegistrarPieza.UseVisualStyleBackColor = true;
+            this.btnRegistrarPieza.Click += new System.EventHandler(this.btnRegistrarPieza_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtGenero);
+            this.groupBox3.Controls.Add(this.btnBuscarExpediente);
+            this.groupBox3.Controls.Add(this.lblGenero);
+            this.groupBox3.Controls.Add(this.txtNumExp);
+            this.groupBox3.Controls.Add(this.lblNumExp);
+            this.groupBox3.Controls.Add(this.txtNombre);
+            this.groupBox3.Controls.Add(this.lblNombre);
+            this.groupBox3.Controls.Add(this.txtNumCedula);
+            this.groupBox3.Controls.Add(this.lblNumCedula);
+            this.groupBox3.Location = new System.Drawing.Point(12, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(294, 203);
+            this.groupBox3.TabIndex = 36;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Datos de la pieza";
+            // 
+            // txtGenero
+            // 
+            this.txtGenero.Location = new System.Drawing.Point(219, 79);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(61, 20);
+            this.txtGenero.TabIndex = 40;
+            // 
+            // btnBuscarExpediente
+            // 
+            this.btnBuscarExpediente.Image = global::CDental.Properties.Resources.lupa;
+            this.btnBuscarExpediente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarExpediente.Location = new System.Drawing.Point(59, 124);
+            this.btnBuscarExpediente.Name = "btnBuscarExpediente";
+            this.btnBuscarExpediente.Size = new System.Drawing.Size(175, 59);
+            this.btnBuscarExpediente.TabIndex = 45;
+            this.btnBuscarExpediente.Text = "Buscar Expediente";
+            this.btnBuscarExpediente.UseVisualStyleBackColor = true;
+            this.btnBuscarExpediente.Click += new System.EventHandler(this.btnBuscarExpediente_Click);
+            // 
+            // lblGenero
+            // 
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Location = new System.Drawing.Point(167, 82);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(45, 13);
+            this.lblGenero.TabIndex = 39;
+            this.lblGenero.Text = "Género:";
+            // 
+            // txtNumExp
+            // 
+            this.txtNumExp.Location = new System.Drawing.Point(116, 79);
+            this.txtNumExp.Name = "txtNumExp";
+            this.txtNumExp.Size = new System.Drawing.Size(43, 20);
+            this.txtNumExp.TabIndex = 38;
+            // 
+            // lblNumExp
+            // 
+            this.lblNumExp.AutoSize = true;
+            this.lblNumExp.Location = new System.Drawing.Point(6, 82);
+            this.lblNumExp.Name = "lblNumExp";
+            this.lblNumExp.Size = new System.Drawing.Size(50, 13);
+            this.lblNumExp.TabIndex = 4;
+            this.lblNumExp.Text = "NumExp:";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(116, 49);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(164, 20);
+            this.txtNombre.TabIndex = 3;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(6, 52);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(94, 13);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.Text = "Nombre Completo:";
+            // 
+            // txtNumCedula
+            // 
+            this.txtNumCedula.Location = new System.Drawing.Point(116, 21);
+            this.txtNumCedula.Name = "txtNumCedula";
+            this.txtNumCedula.Size = new System.Drawing.Size(164, 20);
+            this.txtNumCedula.TabIndex = 1;
+            // 
+            // lblNumCedula
+            // 
+            this.lblNumCedula.AutoSize = true;
+            this.lblNumCedula.Location = new System.Drawing.Point(6, 24);
+            this.lblNumCedula.Name = "lblNumCedula";
+            this.lblNumCedula.Size = new System.Drawing.Size(97, 13);
+            this.lblNumCedula.TabIndex = 0;
+            this.lblNumCedula.Text = "Número de cédula:";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(312, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(296, 193);
+            this.pictureBox2.TabIndex = 37;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pctPiezas
+            // 
+            this.pctPiezas.Image = ((System.Drawing.Image)(resources.GetObject("pctPiezas.Image")));
+            this.pctPiezas.Location = new System.Drawing.Point(12, 221);
+            this.pctPiezas.Name = "pctPiezas";
+            this.pctPiezas.Size = new System.Drawing.Size(294, 439);
+            this.pctPiezas.TabIndex = 0;
+            this.pctPiezas.TabStop = false;
+            // 
+            // frmRegistroExamen
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(617, 672);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.btnVerEstadisticas);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnpieza23);
+            this.Controls.Add(this.btnRegistrarPieza);
+            this.Controls.Add(this.btnpieza22);
+            this.Controls.Add(this.btnpieza21);
+            this.Controls.Add(this.btnpieza24);
+            this.Controls.Add(this.btnpieza25);
+            this.Controls.Add(this.btnpieza26);
+            this.Controls.Add(this.btnpieza27);
+            this.Controls.Add(this.btnpieza28);
+            this.Controls.Add(this.btnpieza20);
+            this.Controls.Add(this.btnpieza29);
+            this.Controls.Add(this.btnpieza19);
+            this.Controls.Add(this.btnpieza30);
+            this.Controls.Add(this.btnpieza18);
+            this.Controls.Add(this.btnpieza17);
+            this.Controls.Add(this.btnpieza31);
+            this.Controls.Add(this.btnpieza32);
+            this.Controls.Add(this.btnpieza16);
+            this.Controls.Add(this.btnpieza15);
+            this.Controls.Add(this.btnpieza14);
+            this.Controls.Add(this.btnpieza13);
+            this.Controls.Add(this.btnpieza12);
+            this.Controls.Add(this.btnpieza11);
+            this.Controls.Add(this.btnpieza10);
+            this.Controls.Add(this.btnpieza9);
+            this.Controls.Add(this.btnpieza8);
+            this.Controls.Add(this.btnpieza7);
+            this.Controls.Add(this.btnpieza6);
+            this.Controls.Add(this.btnpieza5);
+            this.Controls.Add(this.btnpieza4);
+            this.Controls.Add(this.btnpieza3);
+            this.Controls.Add(this.btnpieza2);
+            this.Controls.Add(this.btnpieza1);
+            this.Controls.Add(this.pctPiezas);
+            this.Name = "frmRegistroExamen";
+            this.Text = "frmRegistroExamen";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctPiezas)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox pctPiezas;
+        private System.Windows.Forms.Button btnpieza1;
+        private System.Windows.Forms.Button btnpieza2;
+        private System.Windows.Forms.Button btnpieza3;
+        private System.Windows.Forms.Button btnpieza4;
+        private System.Windows.Forms.Button btnpieza5;
+        private System.Windows.Forms.Button btnpieza6;
+        private System.Windows.Forms.Button btnpieza7;
+        private System.Windows.Forms.Button btnpieza8;
+        private System.Windows.Forms.Button btnpieza9;
+        private System.Windows.Forms.Button btnpieza10;
+        private System.Windows.Forms.Button btnpieza11;
+        private System.Windows.Forms.Button btnpieza12;
+        private System.Windows.Forms.Button btnpieza13;
+        private System.Windows.Forms.Button btnpieza14;
+        private System.Windows.Forms.Button btnpieza15;
+        private System.Windows.Forms.Button btnpieza16;
+        private System.Windows.Forms.Button btnpieza32;
+        private System.Windows.Forms.Button btnpieza31;
+        private System.Windows.Forms.Button btnpieza17;
+        private System.Windows.Forms.Button btnpieza18;
+        private System.Windows.Forms.Button btnpieza30;
+        private System.Windows.Forms.Button btnpieza19;
+        private System.Windows.Forms.Button btnpieza29;
+        private System.Windows.Forms.Button btnpieza20;
+        private System.Windows.Forms.Button btnpieza28;
+        private System.Windows.Forms.Button btnpieza27;
+        private System.Windows.Forms.Button btnpieza26;
+        private System.Windows.Forms.Button btnpieza25;
+        private System.Windows.Forms.Button btnpieza24;
+        private System.Windows.Forms.Button btnpieza21;
+        private System.Windows.Forms.Button btnpieza22;
+        private System.Windows.Forms.Button btnpieza23;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblEstadoPieza;
+        private System.Windows.Forms.TextBox txtDescripcionPieza;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.TextBox txtNumeroPieza;
+        private System.Windows.Forms.Label lblNumeroPieza;
+        private ComboBoxCustom cmbEstadoPieza;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtGenero;
+        private System.Windows.Forms.Label lblGenero;
+        private System.Windows.Forms.TextBox txtNumExp;
+        private System.Windows.Forms.Label lblNumExp;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtNumCedula;
+        private System.Windows.Forms.Label lblNumCedula;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnVerEstadisticas;
+        private System.Windows.Forms.Button btnRegistrarPieza;
+        private System.Windows.Forms.Button btnBuscarExpediente;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbPosición;
+    }
+}
+

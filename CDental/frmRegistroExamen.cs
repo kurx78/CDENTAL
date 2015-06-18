@@ -1,0 +1,528 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using CDental.WSCDental;
+
+namespace CDental
+{
+    public partial class frmRegistroExamen : Form
+    {
+        public frmRegistroExamen()
+        {
+            InitializeComponent();
+            InicializarControles();
+        }
+        public Utilidades claseUtilitaria = new Utilidades();
+        public Expediente expedienteSeleccionado = new Expediente();
+        public  ExamenEncabezado examenEncabezado = new ExamenEncabezado();
+        public List<ExamenDetalle> listaPiezas = new List<ExamenDetalle>();
+        public List<ExamenDetalle> listaActualizadaPiezas = new List<ExamenDetalle>();
+        public int piezaSeleccionada = 1;
+        public int PiezaSeleccionada
+        {
+            get { return piezaSeleccionada; }
+            set
+            {
+                piezaSeleccionada = value;
+                if (piezaSeleccionada != 0)
+                {
+                    txtNumeroPieza.Text = value.ToString();
+                    cmbEstadoPieza.Enabled = true;
+                    cmbPosición.Enabled = true;
+                    try
+                    {
+                        var piezaEnUso = listaActualizadaPiezas.Where(pieza => pieza.Pieza == value).First();
+                        txtDescripcionPieza.Text = piezaEnUso.Observaciones;
+                        cmbEstadoPieza.SelectedIndex = piezaEnUso.TipoEstadoPieza;
+                        cmbPosición.SelectedIndex = piezaEnUso.TipoPosicion;
+
+                    }
+                    catch
+                    {
+                        txtDescripcionPieza.Text = string.Empty;
+                        cmbEstadoPieza.SelectedIndex = 0;
+                        cmbPosición.SelectedIndex = 0;
+                    }
+                    cmbEstadoPieza.Enabled = false;
+                    cmbPosición.Enabled = false;
+
+
+                    
+                }
+            }
+        }
+
+        public void CambiarEstadoPieza(Button boton, Color colorBoton)
+        {
+            boton.BackColor = colorBoton;
+        }
+        public void InicializarControles()
+        {
+            btnpieza1.Enabled = false;
+            btnpieza2.Enabled = false;
+            btnpieza3.Enabled = false;
+            btnpieza4.Enabled = false;
+            btnpieza5.Enabled = false;
+            btnpieza6.Enabled = false;
+            btnpieza7.Enabled = false;
+            btnpieza8.Enabled = false;
+            btnpieza9.Enabled = false;
+            btnpieza10.Enabled = false;
+            btnpieza11.Enabled = false;
+            btnpieza12.Enabled = false;
+            btnpieza13.Enabled = false;
+            btnpieza14.Enabled = false;
+            btnpieza15.Enabled = false;
+            btnpieza16.Enabled = false;
+            btnpieza17.Enabled = false;
+            btnpieza18.Enabled = false;
+            btnpieza19.Enabled = false;
+            btnpieza20.Enabled = false;
+            btnpieza21.Enabled = false;
+            btnpieza22.Enabled = false;
+            btnpieza23.Enabled = false;
+            btnpieza24.Enabled = false;
+            btnpieza25.Enabled = false;
+            btnpieza26.Enabled = false;
+            btnpieza27.Enabled = false;
+            btnpieza28.Enabled = false;
+            btnpieza29.Enabled = false;
+            btnpieza30.Enabled = false;
+            btnpieza31.Enabled = false;
+            btnpieza32.Enabled = false;
+            txtNombre.Enabled = false;
+            txtGenero.Enabled = false;
+            txtNumExp.Enabled = false;
+            txtNumeroPieza.Enabled = false;
+            txtDescripcionPieza.Enabled = false;
+            cmbEstadoPieza.Enabled = false;
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Sana", 0, Color.Green));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Daño Moderado", 1, Color.Yellow));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Daño Avanzado", 2, Color.Red));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Ausente", 3, Color.Black));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Prótesis", 4, Color.Blue));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Reparada", 5, Color.Gray));
+            cmbEstadoPieza.SelectedIndex = 0;
+            cmbEstadoPieza.SelectedValue = 0;
+
+            Dictionary<string, int> dictPosiciones = new Dictionary<string, int>();
+            dictPosiciones.Add("Corona", 0);
+            dictPosiciones.Add("Pulpa", 1);
+            dictPosiciones.Add("Raíz", 2);
+            cmbPosición.DataSource = new BindingSource(dictPosiciones, null);
+            cmbPosición.DisplayMember = "Key";
+            cmbPosición.ValueMember = "Value";
+            cmbPosición.SelectedValue = 0;
+            pctPiezas.Enabled = false;
+            btnRegistrarPieza.Enabled = false;
+            btnVerEstadisticas.Enabled = false;
+            cmbPosición.Enabled = false;
+        }
+
+        public void HabilitarControles()
+        {
+            btnpieza1.Enabled = true;
+            btnpieza2.Enabled = true;
+            btnpieza3.Enabled = true;
+            btnpieza4.Enabled = true;
+            btnpieza5.Enabled = true;
+            btnpieza6.Enabled = true;
+            btnpieza7.Enabled = true;
+            btnpieza8.Enabled = true;
+            btnpieza9.Enabled = true;
+            btnpieza10.Enabled = true;
+            btnpieza11.Enabled = true;
+            btnpieza12.Enabled = true;
+            btnpieza13.Enabled = true;
+            btnpieza14.Enabled = true;
+            btnpieza15.Enabled = true;
+            btnpieza16.Enabled = true;
+            btnpieza17.Enabled = true;
+            btnpieza18.Enabled = true;
+            btnpieza19.Enabled = true;
+            btnpieza20.Enabled = true;
+            btnpieza21.Enabled = true;
+            btnpieza22.Enabled = true;
+            btnpieza23.Enabled = true;
+            btnpieza24.Enabled = true;
+            btnpieza25.Enabled = true;
+            btnpieza26.Enabled = true;
+            btnpieza27.Enabled = true;
+            btnpieza28.Enabled = true;
+            btnpieza29.Enabled = true;
+            btnpieza30.Enabled = true;
+            btnpieza31.Enabled = true;
+            btnpieza32.Enabled = true;
+            btnRegistrarPieza.Enabled = true;
+            btnVerEstadisticas.Enabled = true;
+            txtNumeroPieza.Text = "1";
+            
+        }
+
+        public void BuscarExpediente(string NumeroCedula)
+        {
+            try
+            {
+                var objExpediente = new Expediente();
+                objExpediente.Cedula = NumeroCedula;
+                using (CDentalSoapClient svc = new CDentalSoapClient())
+                {
+                    var listExpediente = new List<Expediente>();
+                    listExpediente = svc.ExpedienteSeleccionar(objExpediente);
+                    if (listExpediente.Count > 0)
+                    {
+                        var clienteExpediente = new Cliente();
+                         clienteExpediente.Cedula = txtNumCedula.Text;
+                        var clienteConsulta = svc.ClienteSeleccionar(clienteExpediente);
+                        clienteExpediente = clienteConsulta.First();
+                        txtNumExp.Text = listExpediente.First().Id_Expediente.ToString();
+                        expedienteSeleccionado = listExpediente.First();
+                        txtNombre.Text = clienteExpediente.Nombre
+                        + " " + clienteExpediente.Apellido1 + " " + clienteExpediente.Apellido2;
+                        if (!clienteExpediente.Dama)
+                        {
+                            txtGenero.Text = "Hombre";
+                        }
+                        else 
+                        {
+                            txtGenero.Text = "Mujer";
+                        }
+                        HabilitarControles();
+                    }
+                    examenEncabezado = new ExamenEncabezado();
+                    examenEncabezado.Expediente = expedienteSeleccionado.Id_Expediente;
+                    var listaEncabezados = svc.ExamenEncabezadoSeleccionar(examenEncabezado);
+                    if (listaEncabezados.Count > 0)
+                    {
+                        examenEncabezado = listaEncabezados.First();
+                        var examenParametro = new ExamenDetalle();
+                        examenParametro.Examen = examenEncabezado.Examen;
+                        listaPiezas = svc.ExamenDetalleSeleccionar(examenParametro);
+                        actualizarEstadoPiezas(listaPiezas);
+                    }
+                    else 
+                    {
+                        var examenParametro = new ExamenEncabezado();
+                        examenParametro.Expediente = expedienteSeleccionado.Id_Expediente;
+                        examenParametro.Observaciones = "Creado: " + DateTime.Now.ToString();
+                        if (svc.ExamenEncabezadoInsertar(examenParametro))
+                        {
+                            examenEncabezado = examenParametro;
+                        }
+                    
+                    }
+                    txtNumCedula.Enabled = false;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void btnBuscarExpediente_Click(object sender, EventArgs e)
+        {
+            bool resultadoValidacion = false;
+            if (txtNumCedula.Text == string.Empty)
+            {
+                MessageBox.Show("Favor digitar un número de cédula válido");
+            }
+            else
+            {
+                if (txtNumCedula.Text.Length != 9)
+                {
+                    MessageBox.Show("El número de carácteres para la cédula son 12 y debe tener el siguiente formato: XXXXXXXXX");
+                }
+                else
+                {
+                    resultadoValidacion = claseUtilitaria.ValidarExpresionRegular(txtNumCedula.Text, @"\b\d{9}\b");
+                }
+            }
+            if (!resultadoValidacion)
+            {
+                txtNumCedula.Text = string.Empty;
+            }
+            else
+            {
+                try
+                {
+                    BuscarExpediente(txtNumCedula.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error durante la búsqueda, inténtelo de nuevo");
+                }
+                }
+        }
+
+        private void btnRegistrarPieza_Click(object sender, EventArgs e)
+        {
+            var frmRegistroPieza = new frmRegistroPiezas(piezaSeleccionada, examenEncabezado.Examen,this);
+            frmRegistroPieza.MdiParent = this.ParentForm; //this refers to f1's parent, the MainForm
+            frmRegistroPieza.Show();
+        }
+
+        private void btnpieza1_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 1;
+        }
+
+        private void btnpieza2_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 2;
+        }
+
+        private void btnpieza3_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 3;
+        }
+
+        private void btnpieza4_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 4;
+        }
+
+        private void btnpieza5_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 5;
+        }
+
+        private void btnpieza6_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 6;
+        }
+
+        private void btnpieza7_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 7;
+        }
+
+        private void btnpieza8_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 8;
+        }
+
+        private void btnpieza9_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 9;
+        }
+
+        private void btnpieza10_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 10;
+        }
+
+        private void btnpieza11_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 11;
+        }
+
+        private void btnpieza12_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 12;
+        }
+
+        private void btnpieza13_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 13;
+        }
+
+        private void btnpieza14_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 14;
+        }
+
+        private void btnpieza15_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 15;
+        }
+
+        private void btnpieza16_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 16;
+        }
+
+        private void btnpieza17_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 17;
+        }
+
+        private void btnpieza18_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 18;
+        }
+
+        private void btnpieza19_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 19;
+        }
+
+        private void btnpieza20_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 20;
+        }
+
+        private void btnpieza21_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 21;
+        }
+
+        private void btnpieza22_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 22;
+        }
+
+        private void btnpieza23_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 23;
+        }
+
+        private void btnpieza24_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 24;
+        }
+
+        private void btnpieza25_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 25;
+        }
+
+        private void btnpieza26_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 26;
+        }
+
+        private void btnpieza27_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 27;
+        }
+
+        private void btnpieza28_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 28;
+        }
+
+        private void btnpieza29_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 29;
+        }
+
+        private void btnpieza30_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 30;
+        }
+
+        private void btnpieza31_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 31;
+        }
+
+        private void btnpieza32_Click(object sender, EventArgs e)
+        {
+            PiezaSeleccionada = 32;
+        }
+
+        public void refrescaraAlCerrar()
+        {
+            try
+            {
+                using (CDentalSoapClient svc = new CDentalSoapClient())
+                {
+                    var examenParametro = new ExamenDetalle();
+                    examenParametro.Examen = examenEncabezado.Examen;
+                    listaPiezas = svc.ExamenDetalleSeleccionar(examenParametro);
+                    actualizarEstadoPiezas(listaPiezas);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al refrescar cambios");
+            }
+        
+        }
+
+        public void actualizarEstadoPiezas(List<ExamenDetalle> listaPiezas)
+        {
+            
+            for (int i = 0; i < 33; i++)
+            {
+                if (i != 0)
+                {
+
+                    var listaPiezasPosicionActual = listaPiezas.Where(pieza => pieza.Pieza == i);
+                    if (listaPiezasPosicionActual.Count() != 0)
+                    {
+                        listaPiezasPosicionActual = listaPiezasPosicionActual.OrderByDescending(pieza => pieza.FechaCambioEstado);
+                        var ultimaPiezaEditada = listaPiezasPosicionActual.First();
+                        listaActualizadaPiezas.Add(ultimaPiezaEditada);
+                        var colorCambioEstado = new Color();
+
+                        switch(ultimaPiezaEditada.TipoEstadoPieza)
+                        {
+                            case 0: colorCambioEstado = Color.Green; break;
+                            case 1: colorCambioEstado = Color.Yellow; break;
+                            case 2: colorCambioEstado = Color.Red; break;
+                            case 3: colorCambioEstado = Color.Black; break;
+                            case 4: colorCambioEstado = Color.Blue; break;
+                            case 5: colorCambioEstado = Color.Gray; break;
+                        }
+                        switch (i)
+                        {
+                            case 1: CambiarEstadoPieza(btnpieza1, colorCambioEstado); break;
+                            case 2: CambiarEstadoPieza(btnpieza2, colorCambioEstado); break;
+                            case 3: CambiarEstadoPieza(btnpieza3, colorCambioEstado); break;
+                            case 4: CambiarEstadoPieza(btnpieza4, colorCambioEstado); break;
+                            case 5: CambiarEstadoPieza(btnpieza5, colorCambioEstado); break;
+                            case 6: CambiarEstadoPieza(btnpieza6, colorCambioEstado); break;
+                            case 7: CambiarEstadoPieza(btnpieza7, colorCambioEstado); break;
+                            case 8: CambiarEstadoPieza(btnpieza8, colorCambioEstado); break;
+                            case 9: CambiarEstadoPieza(btnpieza9, colorCambioEstado); break;
+                            case 10: CambiarEstadoPieza(btnpieza10, colorCambioEstado); break;
+                            case 11: CambiarEstadoPieza(btnpieza11, colorCambioEstado); break;
+                            case 12: CambiarEstadoPieza(btnpieza12, colorCambioEstado); break;
+                            case 13: CambiarEstadoPieza(btnpieza13, colorCambioEstado); break;
+                            case 14: CambiarEstadoPieza(btnpieza14, colorCambioEstado); break;
+                            case 15: CambiarEstadoPieza(btnpieza15, colorCambioEstado); break;
+                            case 16: CambiarEstadoPieza(btnpieza16, colorCambioEstado); break;
+                            case 17: CambiarEstadoPieza(btnpieza17, colorCambioEstado); break;
+                            case 18: CambiarEstadoPieza(btnpieza18, colorCambioEstado); break;
+                            case 19: CambiarEstadoPieza(btnpieza19, colorCambioEstado); break;
+                            case 20: CambiarEstadoPieza(btnpieza20, colorCambioEstado); break;
+                            case 21: CambiarEstadoPieza(btnpieza21, colorCambioEstado); break;
+                            case 22: CambiarEstadoPieza(btnpieza22, colorCambioEstado); break;
+                            case 23: CambiarEstadoPieza(btnpieza23, colorCambioEstado); break;
+                            case 24: CambiarEstadoPieza(btnpieza24, colorCambioEstado); break;
+                            case 25: CambiarEstadoPieza(btnpieza25, colorCambioEstado); break;
+                            case 26: CambiarEstadoPieza(btnpieza26, colorCambioEstado); break;
+                            case 27: CambiarEstadoPieza(btnpieza27, colorCambioEstado); break;
+                            case 28: CambiarEstadoPieza(btnpieza28, colorCambioEstado); break;
+                            case 29: CambiarEstadoPieza(btnpieza29, colorCambioEstado); break;
+                            case 30: CambiarEstadoPieza(btnpieza30, colorCambioEstado); break;
+                            case 31: CambiarEstadoPieza(btnpieza31, colorCambioEstado); break;
+                            case 32: CambiarEstadoPieza(btnpieza32, colorCambioEstado); break;
+                            
+                            
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        private void btnVerEstadisticas_Click(object sender, EventArgs e)
+        {
+            frmHistorial historialDental = new frmHistorial(expedienteSeleccionado.Cedula);
+            historialDental.Show();
+        }
+
+    }
+}

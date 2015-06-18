@@ -1,0 +1,142 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using CDental.WSCDental;
+
+namespace CDental
+{
+    public partial class frmRegistroExamen : Form
+    {
+        public frmRegistroExamen()
+        {
+            InitializeComponent();
+            DesabilitarControles();
+        }
+        public Utilidades claseUtilitaria = new Utilidades();
+        public Expediente expedienteSeleccionado = new Expediente();
+
+        public void CambiarEstadoPieza(Button boton, Color colorBoton)
+        {
+            boton.BackColor = colorBoton;
+        }
+        public void DesabilitarControles()
+        {
+            btnpieza1.Enabled = false;
+            btnpieza2.Enabled = false;
+            btnpieza3.Enabled = false;
+            btnpieza4.Enabled = false;
+            btnpieza5.Enabled = false;
+            btnpieza6.Enabled = false;
+            btnpieza7.Enabled = false;
+            btnpieza8.Enabled = false;
+            btnpieza9.Enabled = false;
+            btnpieza10.Enabled = false;
+            btnpieza11.Enabled = false;
+            btnpieza12.Enabled = false;
+            btnpieza13.Enabled = false;
+            btnpieza14.Enabled = false;
+            btnpieza15.Enabled = false;
+            btnpieza16.Enabled = false;
+            btnpieza17.Enabled = false;
+            btnpieza18.Enabled = false;
+            btnpieza19.Enabled = false;
+            btnpieza20.Enabled = false;
+            btnpieza21.Enabled = false;
+            btnpieza22.Enabled = false;
+            btnpieza23.Enabled = false;
+            btnpieza24.Enabled = false;
+            btnpieza25.Enabled = false;
+            btnpieza26.Enabled = false;
+            btnpieza27.Enabled = false;
+            btnpieza28.Enabled = false;
+            btnpieza29.Enabled = false;
+            btnpieza30.Enabled = false;
+            btnpieza31.Enabled = false;
+            btnpieza32.Enabled = false;
+            txtNombre.Enabled = false;
+            txtGenero.Enabled = false;
+            txtNumExp.Enabled = false;
+            txtNumeroPieza.Enabled = false;
+            txtDescripcionPieza.Enabled = false;
+            cmbEstadoPieza.Enabled = true;
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Sana", "0", Color.Green));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Daño Moderado", "1", Color.Yellow));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Daño Avanzado", "2", Color.Red));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Ausente", "3", Color.Black));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Prótesis", "4", Color.Blue));
+            cmbEstadoPieza.Items.Add(new ComboBoxItem("Reparada", "5", Color.Gray));
+            pctPiezas.Enabled = false;
+            btnCrearExamen.Enabled = false;
+            btnRegistrarPieza.Enabled = false;
+            btnVerEstadisticas.Enabled = false;
+        }
+
+        public void BuscarExpediente(string NumeroCedula)
+        {
+            try
+            {
+                var objExpediente = new Expediente();
+                objExpediente.Cedula = NumeroCedula;
+                using (CDentalSoapClient svc = new CDentalSoapClient())
+                {
+                    var listExpediente = new List<Expediente>();
+                    listExpediente = svc.ExpedienteSeleccionar(objExpediente);
+                    if (listExpediente.Count > 0)
+                    {
+                        var clienteExpediente = new Cliente();
+                        clienteExpediente.Cedula = txtNumCedula.Text;
+                        var clienteConsulta = svc.ClienteSeleccionar(clienteExpediente);
+                        clienteExpediente = clienteConsulta.First();
+                        txtNumExp.Text = listExpediente.First().Id_Expediente + " " + clienteExpediente.Nombre
+                        + " " + clienteExpediente.Apellido1 + " " + clienteExpediente.Apellido2;
+                        expedienteSeleccionado = listExpediente.First();
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void btnBuscarExpediente_Click(object sender, EventArgs e)
+        {
+            bool resultadoValidacion = false;
+            if (txtNumCedula.Text == string.Empty)
+            {
+                MessageBox.Show("Favor digitar un número de cédula válido");
+            }
+            else
+            {
+                if (txtNumCedula.Text.Length != 9)
+                {
+                    MessageBox.Show("El número de carácteres para la cédula son 12 y debe tener el siguiente formato: XXXXXXXXX");
+                }
+                else
+                {
+                    resultadoValidacion = claseUtilitaria.ValidarExpresionRegular(txtNumCedula.Text, @"\b\d{9}\b");
+                }
+            }
+            if (!resultadoValidacion)
+            {
+                txtNumCedula.Text = string.Empty;
+            }
+            else
+            {
+                BuscarExpediente(txtNumCedula.Text);
+            }
+        }
+
+        private void btnRegistrarPieza_Click(object sender, EventArgs e)
+        {
+            CambiarEstadoPieza(btnpieza1, Color.DarkBlue);
+        }
+    }
+}

@@ -1,0 +1,144 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Web.Services;
+using System.Windows.Forms;
+using CDental.WSCDental;
+using System.Text.RegularExpressions;
+
+namespace CDental
+{
+    public class Utilidades
+    {
+        public List<TipoDireccion> llenarComboTipoDireccion()
+        {
+            var listDireccion = new List<TipoDireccion>();
+            var objTipoDireccion = new TipoDireccion();
+            objTipoDireccion.Id_TipoDireccion = 0;
+            using (CDentalSoapClient svc = new CDentalSoapClient())
+            {
+                listDireccion = svc.TipoDireccionSeleccionar(objTipoDireccion);
+            }
+            return listDireccion;
+        }
+
+        public List<TipoOcupacion> llenarComboTipoOcupacion()
+        {
+            var listTipoOcupacion = new List<TipoOcupacion>();
+            var objTipoTipoOcupacion = new TipoOcupacion();
+            objTipoTipoOcupacion.Ocupacion = 0;
+            using (CDentalSoapClient svc = new CDentalSoapClient())
+            {
+                listTipoOcupacion = svc.TipoOcupacionSeleccionar(objTipoTipoOcupacion);
+            }
+            return listTipoOcupacion;
+        }
+
+        public List<TipoTelefono> llenarComboTipoTelefono()
+        {
+            var listTipoTelefono = new List<TipoTelefono>();
+            var objTipoTelefono = new TipoTelefono();
+            objTipoTelefono.Id_TipoTelefono = 0;
+            using (CDentalSoapClient svc = new CDentalSoapClient())
+            {
+                listTipoTelefono = svc.TipoTelefonoSeleccionar(objTipoTelefono);
+            }
+            return listTipoTelefono;
+        }
+
+        public List<TipoPosicion> llenarComboTipoPosicion()
+        {
+            var listTipoPosicion = new List<TipoPosicion>();
+            var objTipoPosicion = new TipoPosicion();
+            objTipoPosicion.Id_TipoPosicion = 0;
+            using (CDentalSoapClient svc = new CDentalSoapClient())
+            {
+                listTipoPosicion = svc.TipoPosicionSeleccionar(objTipoPosicion);
+            }
+            return listTipoPosicion;
+        }
+
+        public List<TipoParentesco> llenarComboTipoParentesco()
+        {
+            var listTipoParentesco = new List<TipoParentesco>();
+            var objTipoParentesco = new TipoParentesco();
+            objTipoParentesco.Id_TipoParentesco = 0;
+            using (CDentalSoapClient svc = new CDentalSoapClient())
+            {
+                listTipoParentesco = svc.TipoParentescoSeleccionar(objTipoParentesco);
+            }
+            return listTipoParentesco;
+        }
+
+        public List<TipoEstadoPieza> llenarComboTipoEstadoPieza()
+        {
+            var listTipoEstadoPieza = new List<TipoEstadoPieza>();
+            var objTipoEstadoPieza = new TipoEstadoPieza();
+            objTipoEstadoPieza.Id_TipoEstadoPieza = 0;
+            using (CDentalSoapClient svc = new CDentalSoapClient())
+            {
+                listTipoEstadoPieza = svc.TipoEstadoPiezaSeleccionar(objTipoEstadoPieza);
+            }
+            return listTipoEstadoPieza;
+        }
+
+        public List<Pais> llenarComboPais()
+        {
+            var listPais = new List<Pais>();
+            var objPais = new Pais();
+            objPais.Id_pais = 0;
+            using (CDentalSoapClient svc = new CDentalSoapClient())
+            {
+                listPais = svc.PaisSeleccionar(objPais);
+            }
+            return listPais;
+        }
+
+        public List<Provincia> llenarComboProvincia()
+        {
+            var listProvincia = new List<Provincia>();
+            var objProvincia = new Provincia();
+            objProvincia.Id_provincia = 0;
+            using (CDentalSoapClient svc = new CDentalSoapClient())
+            {
+                listProvincia = svc.ProvinciaSeleccionar(objProvincia);
+            }
+            return listProvincia;
+        }
+
+        public List<Canton> llenarComboCanton(int pIdProvincia)
+        {
+            var listCanton = new List<Canton>();
+            var objCanton = new Canton();
+            objCanton.Id_provincia = pIdProvincia;
+            objCanton.Id_canton = 0;
+            using (CDentalSoapClient svc = new CDentalSoapClient())
+            {
+                listCanton = svc.CantonSeleccionar(objCanton);
+            }
+            return listCanton;
+        }
+
+        public List<Distrito> llenarComboCanton(int pIdProvincia,int pIdCanton)
+        {
+            var listDistrito = new List<Distrito>();
+            var objDistrito = new Distrito();
+            objDistrito.Id_provincia = pIdProvincia;
+            objDistrito.Id_canton = pIdCanton;
+            objDistrito.Id_distrito = 0;
+            using (CDentalSoapClient svc = new CDentalSoapClient())
+            {
+                listDistrito = svc.DistritoSeleccionar(objDistrito);
+            }
+            return listDistrito;
+        }
+        public bool ValidarExpresionRegular(string Valor, string ExpresionEvaluar)
+        {
+            return Regex.IsMatch(Valor, ExpresionEvaluar);
+        }
+    }
+}

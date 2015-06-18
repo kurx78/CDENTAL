@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5939DCAF-DFC2-4213-877D-F3044AB30BB0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CDental</RootNamespace>
+    <AssemblyName>CDental</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Acciones.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmGestionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmGestionUsuarios.Designer.cs">
+      <DependentUpon>frmGestionUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmRegistroExamen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroExamen.Designer.cs">
+      <DependentUpon>frmRegistroExamen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionCitas.Designer.cs">
+      <DependentUpon>frmGestionCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtrasGestiones\frmTipoDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtrasGestiones\frmTipoDireccion.Designer.cs">
+      <DependentUpon>frmTipoDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtrasGestiones\frmTipoOcupacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtrasGestiones\frmTipoOcupacion.Designer.cs">
+      <DependentUpon>frmTipoOcupacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtrasGestiones\frmTipoTelefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtrasGestiones\frmTipoTelefono.Designer.cs">
+      <DependentUpon>frmTipoTelefono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WSCDental\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades.cs" />
+    <Compile Include="Ventana.cs" />
+    <EmbeddedResource Include="Acciones.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Acciones.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmGestionUsuarios.resx">
+      <DependentUpon>frmGestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionCitas.resx">
+      <DependentUpon>frmGestionCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroExamen.resx">
+      <DependentUpon>frmRegistroExamen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtrasGestiones\frmTipoDireccion.resx">
+      <DependentUpon>frmTipoDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtrasGestiones\frmTipoOcupacion.resx">
+      <DependentUpon>frmTipoOcupacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtrasGestiones\frmTipoTelefono.resx">
+      <DependentUpon>frmTipoTelefono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\WSCDental\CDental.WSCDental.Canton.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.Cita.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.Cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.Cuentas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.DireccionesCliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.Distrito.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.ExamenDetalle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.ExamenEncabezado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.Expediente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.ExpedienteOpcional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.Pais.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.ParentescoCliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.Piezas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.Provincia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.Telefonos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.TipoDireccion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.TipoEstadoPieza.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.TipoOcupacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.TipoParentesco.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.TipoPosicion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.TipoTelefono.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.WSCDental.Usuarios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCDental\CDental.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElementosBD\ElementosBD.csproj">
+      <Project>{199D6DF1-754F-4F39-BFAF-1E27827E49B7}</Project>
+      <Name>ElementosBD</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clientes\" />
+    <Folder Include="Expedientes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WSCDental\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WSCDental\CDental.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WSCDental\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WSCDental\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WSCDental\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anesthesia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple53.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dental1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dental2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dentist11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dentist12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dentist13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dentist14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dentist15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dentist16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dentists.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drop18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female205.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forceps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifeline8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tooth17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tooth18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tooth19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tooth20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toothbrush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toothpaste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dental-phobia-2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image002.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

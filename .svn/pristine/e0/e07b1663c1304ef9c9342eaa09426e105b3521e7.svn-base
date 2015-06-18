@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="CDentalSoap" closeTimeout="00:01:00" openTimeout="00:01:00"
+                    receiveTimeout="00:10:00" sendTimeout="00:01:00" allowCookies="false"
+                    bypassProxyOnLocal="false" maxBufferPoolSize="524288" maxReceivedMessageSize="65536"
+                    useDefaultWebProxy="true" />
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:63926/CDental.asmx" binding="basicHttpBinding"
+                bindingConfiguration="CDentalSoap" contract="WSCDental.CDentalSoap"
+                name="CDentalSoap" />
+        </client>
+    </system.serviceModel>
+</configuration>

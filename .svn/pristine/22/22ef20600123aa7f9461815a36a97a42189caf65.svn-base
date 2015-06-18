@@ -1,0 +1,99 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using CDental.WSCDental;
+
+namespace CDental.OtrasGestiones
+{
+    public partial class frmTipoTelefono : Form
+    {
+        public frmTipoTelefono()
+        {
+            InitializeComponent();
+            this.Seleccionar(0);
+        }
+
+        private void Seleccionar(int pTipoTelefono)
+        {
+            try
+            {
+                var objTipoTelefono = new TipoTelefono();
+                objTipoTelefono.Id_TipoTelefono = pTipoTelefono;
+                using (CDentalSoapClient svc = new CDentalSoapClient())
+                {
+                    var listTipoTelefono = new List<TipoTelefono>();
+                    listTipoTelefono = svc.TipoTelefonoSeleccionar(objTipoTelefono);
+                    if (listTipoTelefono.Count > 0)
+                    {
+                        this.dgTipoDireccionDetalles.AutoGenerateColumns = false;
+                        this.dgTipoDireccionDetalles.DataSource = listTipoTelefono;
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private bool RealizarAccion(string pAccion)
+        {
+            bool retorno = false;
+            try
+            {
+                var objTipoTelefono = new TipoTelefono();
+                objTipoTelefono.Id_TipoTelefono = Convert.ToInt32(this.txtTipoTelefono.Text);
+                objTipoTelefono.Descripcion = this.txtDescripcion.Text;
+                using (CDentalSoapClient svc = new CDentalSoapClient())
+                {
+                    if (Acciones.Insertar.Equals(pAccion))
+                    {
+                        retorno = svc.TipoTelefonoInsertar(objTipoTelefono);
+                    }
+                    if (Acciones.Modificar.Equals(pAccion))
+                    {
+                        retorno = svc.TipoTelefonoModificar(objTipoTelefono);
+                    }
+                    if (Acciones.Eliminar.Equals(pAccion))
+                    {
+                        retorno = svc.TipoTelefonoEliminar(objTipoTelefono);
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return retorno;
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Seleccionar(Convert.ToInt32(this.txtTipoTelefono.Text));
+        }
+
+        private void insertarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.RealizarAccion(Acciones.Insertar);
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.RealizarAccion(Acciones.Modificar);
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.RealizarAccion(Acciones.Eliminar);
+        }
+    }
+}

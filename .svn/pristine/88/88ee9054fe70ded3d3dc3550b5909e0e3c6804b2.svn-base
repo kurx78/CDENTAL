@@ -1,0 +1,119 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using CDental.WSCDental;
+
+namespace CDental.Administracion
+{
+    public partial class frmGestionUsuarios : Form
+    {
+        public frmGestionUsuarios()
+        {
+            InitializeComponent();
+            this.Seleccionar("00");
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Seleccionar(this.txtUsuario.Text);
+        }
+
+        private void Seleccionar(string pUsuario)
+        {
+            try
+            {
+                var objUsuario = new Usuarios();
+                objUsuario.Usuario = pUsuario;
+                using (CDentalSoapClient svc = new CDentalSoapClient())
+                {
+                    var listUsuario = new List<Usuarios>();
+                    listUsuario = svc.UsuariosSeleccionar(objUsuario);
+                    if (listUsuario.Count > 0)
+                    {
+                        this.dgUsuariosDetalle.AutoGenerateColumns = false;
+                        this.dgUsuariosDetalle.DataSource = listUsuario;
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private bool RealizarAccion(string pAccion)
+        {
+            bool retorno = false;
+            try
+            {
+                var objUsuario = new Usuarios();
+                objUsuario.Usuario = this.txtUsuario.Text;
+                objUsuario.Contraseña = this.txtContrasena.Text;
+                objUsuario.Cedula = this.txtCedula.Text;
+                using (CDentalSoapClient svc = new CDentalSoapClient())
+                {
+                    if (Acciones.Insertar.Equals(pAccion))
+                    {
+                        retorno = svc.UsuariosInsertar(objUsuario);
+                    }
+                    if (Acciones.Modificar.Equals(pAccion))
+                    {
+                        retorno = svc.UsuariosModificar(objUsuario);
+                    }
+                    if (Acciones.Eliminar.Equals(pAccion))
+                    {
+                        retorno = svc.UsuariosEliminar(objUsuario);
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return retorno;
+        }
+
+        private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.RealizarAccion(Acciones.Insertar);
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.RealizarAccion(Acciones.Modificar);
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.RealizarAccion(Acciones.Eliminar);
+        }
+
+        private void dgUsuariosDetalle_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow fila = dgUsuariosDetalle.Rows[e.RowIndex];
+                this.txtCedula.Text = Convert.ToString(fila.Cells["Cedula"].Value);
+                this.txtContrasena.Text = Convert.ToString(fila.Cells["Contraseña"].Value);
+                this.txtUsuario.Text = Convert.ToString(fila.Cells["Usuario"].Value);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+        }
+       
+    }
+}

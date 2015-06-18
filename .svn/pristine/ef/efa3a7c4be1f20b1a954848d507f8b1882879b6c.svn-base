@@ -1,0 +1,114 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using CDental.WSCDental;
+
+namespace CDental.OtrasGestiones
+{
+    public partial class frmTipoDireccion : Form
+    {
+        public frmTipoDireccion()
+        {
+            InitializeComponent();
+            this.Seleccionar(0);
+        }
+
+        private void Seleccionar(int pTipoDireccion)
+        {
+            try
+            {
+                var objTipoDireccion = new TipoDireccion();
+                objTipoDireccion.Id_TipoDireccion = pTipoDireccion;
+                using (CDentalSoapClient svc = new CDentalSoapClient())
+                {
+                    var listTipoDireccion = new List<TipoDireccion>();
+                    listTipoDireccion = svc.TipoDireccionSeleccionar(objTipoDireccion);
+                    if (listTipoDireccion.Count > 0)
+                    {
+                        this.dgTipoDireccionDetalles.AutoGenerateColumns = false;
+                        this.dgTipoDireccionDetalles.DataSource = listTipoDireccion;
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private bool RealizarAccion(string pAccion)
+        {
+            bool retorno = false;
+            try
+            {
+                var objTipoDireccion = new TipoDireccion();
+                objTipoDireccion.Id_TipoDireccion = Convert.ToInt32(this.txtIdTipoDireccion.Text);
+                objTipoDireccion.Descripcion = this.txtDescripcion.Text;
+                using (CDentalSoapClient svc = new CDentalSoapClient())
+                {
+                    if (Acciones.Insertar.Equals(pAccion))
+                    {
+                        retorno = svc.TipoDireccionInsertar(objTipoDireccion);
+                    }
+                    if (Acciones.Modificar.Equals(pAccion))
+                    {
+                        retorno = svc.TipoDireccionModificar(objTipoDireccion);
+                    }
+                    if (Acciones.Eliminar.Equals(pAccion))
+                    {
+                        retorno = svc.TipoDireccionEliminar(objTipoDireccion);
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return retorno;
+        }
+
+        private void dgTipoDireccionDetalles_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow fila = dgTipoDireccionDetalles.Rows[e.RowIndex];
+                this.txtIdTipoDireccion.Text = Convert.ToString(fila.Cells["IdTipoDireccion"].Value);
+                this.txtDescripcion.Text = Convert.ToString(fila.Cells["Descripcion"].Value);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Seleccionar(Convert.ToInt32(this.txtIdTipoDireccion.Text));
+        }
+
+        private void insertarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.RealizarAccion(Acciones.Insertar);
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.RealizarAccion(Acciones.Modificar);
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.RealizarAccion(Acciones.Eliminar);
+        }
+    }
+}

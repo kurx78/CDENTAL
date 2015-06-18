@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+              <binding name="CDentalSoap" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647" />
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:63926/CDental.asmx" binding="basicHttpBinding"
+                bindingConfiguration="CDentalSoap" contract="WSCDental.CDentalSoap"
+                name="CDentalSoap" />
+        </client>
+    </system.serviceModel>
+  <appSettings>
+    <add key="DireccionLog" value="D:\\CDentalLog.log" />
+  </appSettings>
+</configuration>

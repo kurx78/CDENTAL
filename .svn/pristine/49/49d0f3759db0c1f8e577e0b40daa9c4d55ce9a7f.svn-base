@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="CDental.Properties.Settings.CDentalConnectionString"
+            connectionString="Data Source=DEV;Initial Catalog=CDental;User ID=sa;Password=k98mp44g3"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+              <binding name="CDentalSoap" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647" />
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:63926/CDental.asmx" binding="basicHttpBinding"
+                bindingConfiguration="CDentalSoap" contract="WSCDental.CDentalSoap"
+                name="CDentalSoap" />
+        </client>
+    </system.serviceModel>
+  <appSettings>
+    <add key="DireccionLog" value="D:\\CDentalLog.log" />
+  </appSettings>
+</configuration>

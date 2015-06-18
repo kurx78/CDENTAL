@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using CDental.Administracion;
+using CDental.OtrasGestiones;
+
+
+namespace CDental
+{
+    public partial class frmMenuPrincipal : Form
+    {
+        private static frmGestionUsuarios pfrmGestionUsuarios = new frmGestionUsuarios();
+        private static frmTipoDireccion pfrmTipoDireccion = new frmTipoDireccion();
+        private static frmTipoOcupacion pfrmTipoOcupacion = new frmTipoOcupacion();
+        private static frmTipoTelefono pfrmTipoTelefono = new frmTipoTelefono();
+        private static frmGestionCitas pfrmGestionCitas = new frmGestionCitas();
+        private static frmRegistroExamen pfrmRegistroExamen = new frmRegistroExamen();
+        
+        public frmMenuPrincipal()
+        {
+            InitializeComponent();
+        }
+
+        private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void examenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ventana menu = new Ventana(this);
+            menu.ActivarFormulario(pfrmRegistroExamen);
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ventana menu = new Ventana(this);
+            menu.ActivarFormulario(pfrmGestionUsuarios);
+        }
+
+        private void tiposDireccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ventana menu = new Ventana(this);
+            menu.ActivarFormulario(pfrmTipoDireccion);
+        }
+
+        private void ocupacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ventana menu = new Ventana(this);
+            menu.ActivarFormulario(pfrmTipoOcupacion);
+        }
+
+        private void tiposDeTelefonosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ventana menu = new Ventana(this);
+            menu.ActivarFormulario(pfrmTipoTelefono);
+        }
+
+        private void gestionDeCitaasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ventana menu = new Ventana(this);
+            menu.ActivarFormulario(pfrmGestionCitas);
+        }
+    }
+}
